@@ -33,6 +33,6 @@ def facecrop_directory(input_path, output_path, resize_dim=(32,32)):
             cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
  
             roi = image[y:y + h, x:x + w]
-            resized = cv2.resize(roi, (32, 32))
+            resized = cv2.resize(roi, resize_dim)
             cv2.imwrite(f'{output_path}{str(number)}.jpg', resized)
            
