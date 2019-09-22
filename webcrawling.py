@@ -1,25 +1,20 @@
-﻿from google_images_download import google_images_download 
+from google_images_download import google_images_download 
 import os
 import cv2
 import glob
 
-def imagedownloader(keywords, limit=100):
+def imagedownloader(keywords, output_directory, limit=50):
 
     response = google_images_download.googleimagesdownload()
 
-    arguments = {"keywords":keywords,"limit":limit,"format":'jpg', "prefix":False, "type":'face', 'no_directory':True}
+    arguments = {"keywords":keywords,"limit":limit,"format":'jpg', "prefix":False, "type":'face', 'no_directory':True, 'output_directory':output_directory}
 
-    paths = response.download(arguments)
-    print(paths)
-
-def rename(path, name=''):
-    number = 0
-    for i in os.listdir(path):
-        number += 1
-        os.rename(f'{path}{i}', f'{path}{name}{number}.jpg')
+    response.download(arguments)
 
 def facecrop_directory(input_path, output_path, resize_dim=(32,32)):
     number = 0
+    if not os.path.isdir(output_path):
+        os.mkdir(output_path)
     for i in glob.glob(input_path+'*'):
         number += 1
         image = cv2.imread(i)
@@ -34,5 +29,10 @@ def facecrop_directory(input_path, output_path, resize_dim=(32,32)):
  
             roi = image[y:y + h, x:x + w]
             resized = cv2.resize(roi, resize_dim)
-            cv2.imwrite(f'{output_path}{str(number)}.jpg', resized)
-           
+            cv2.imwrite(f'{output_path}face{str(number)}.jpg', resized)
+
+"""
+ex)
+imagedownloader('man', 'd:/data/pic/', 100)
+facecrop_directory('d:/data/pic/', 'd:/data/faces/', (128,128))
+"""
