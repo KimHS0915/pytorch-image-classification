@@ -23,3 +23,11 @@ pytorch를 이용해 이미지를 남자, 여자로 분류하며 image classific
 
 test1 : 학습된 이미지와 유사한 이미지들로 구성되었다.  
 test2 : 학습된 이미지와 표정, 각도 등에 차이가 있는 이미지들로 구성되었다.
+
+![mlp](https://github.com/KimHS0915/pytorch-image-classification/img/mlp.png)
+![mlp2](https://github.com/KimHS0915/pytorch-image-classification/img/mlp2.png)  
+![cnn](https://github.com/KimHS0915/pytorch-image-classification/img/cnn.png)
+![vgg](https://github.com/KimHS0915/pytorch-image-classification/img/vgg.png)
+![resnet](https://github.com/KimHS0915/pytorch-image-classification/img/resnet.png)  
+![mlprelusig](https://github.com/KimHS0915/pytorch-image-classification/img/mlprelusig.png)  
+![mlpcnnvggresnet](https://github.com/KimHS0915/pytorch-image-classification/img/mlpcnnvggresnet.png)  
