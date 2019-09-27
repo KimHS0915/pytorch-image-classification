@@ -11,23 +11,30 @@ pytorch를 이용해 이미지를 남자, 여자로 분류하며 image classific
     + torch 1.1.0
 
 ## result
-모델 별 정확도  
-
-|     | test1 | test2 |
-|:----|:-----:|------:|
-| MLP |  0.92 | 0.72  |
-| MLP(Sigmoid) | 0.5 | 0.5 |
-| CNN |  0.92 | 0.79 |
-| VGG |  0.93 | 0.86 |
-| RESNET | 0.92 | 0.8 |
 
 test1 : 학습된 이미지와 유사한 이미지들로 구성되었다.  
-test2 : 학습된 이미지와 표정, 각도 등에 차이가 있는 이미지들로 구성되었다.
+test2 : 학습된 이미지와 표정, 각도 등에 차이가 있는 이미지들로 구성되었다.  
 
-![mlp](https://github.com/KimHS0915/pytorch-image-classification/img/mlp.png)
-![mlp2](https://github.com/KimHS0915/pytorch-image-classification/img/mlp2.png)  
-![cnn](https://github.com/KimHS0915/pytorch-image-classification/img/cnn.png)
-![vgg](https://github.com/KimHS0915/pytorch-image-classification/img/vgg.png)
-![resnet](https://github.com/KimHS0915/pytorch-image-classification/img/resnet.png)  
-![mlprelusig](https://github.com/KimHS0915/pytorch-image-classification/img/mlprelusig.png)  
-![mlpcnnvggresnet](https://github.com/KimHS0915/pytorch-image-classification/img/mlpcnnvggresnet.png)  
+![mlp](https://github.com/KimHS0915/pytorch-image-classification/blob/master/img/mlp.png)
+![mlp2](https://github.com/KimHS0915/pytorch-image-classification/blob/master/img/mlp2.png)  
+![cnn](https://github.com/KimHS0915/pytorch-image-classification/blob/master/img/cnn.png)
+![vgg](https://github.com/KimHS0915/pytorch-image-classification/blob/master/img/vgg.png)
+![resnet](https://github.com/KimHS0915/pytorch-image-classification/blob/master/img/resnet.png)  
+
+ReLu vs Sigmoid  
+![mlprelusig](https://github.com/KimHS0915/pytorch-image-classification/blob/master/img/mlprelusig.png)  
+
+모델별 비교  
+
+![mlpcnnvggresnet](https://github.com/KimHS0915/pytorch-image-classification/blob/master/img/mlpcnnvggresnet.png)  
+
+| Accuracy | test1 | test2 |
+|:----|:-----:|------:|
+| MLP |  90% | 71%  |
+| MLP(Sigmoid) | 50% | 50% |
+| CNN |  92% | 80% |
+| VGG |  91% | 81% |
+| RESNET | 94% | 79% |
+
+
+
