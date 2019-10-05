@@ -6,6 +6,16 @@ pytorch를 이용해 이미지를 남자, 여자로 분류하며 image classific
   + [cv2 4.1.1](https://opencv.org/)  
   + [google_images_download](https://google-images-download.readthedocs.io/en/latest/index.html)
 
++ google_images_download에서 100장보다 더 많은 수의 이미지를 한 번에 다운로드하는 방법  
+Chrome과 동일한 버전의 Chromedriver가 필요합니다. Chrome의 버전은 설정 - Chrome 에서 확인할 수 있습니다.  
+만약 Chrome이 설치되어 있지 않다면 Chrome은 아래에서 받을 수 있습니다.  
+https://www.google.com/intl/ko/chrome/  
+Chormedriver는 아래에서 받을 수 있습니다.  
+https://chromedriver.chromium.org/downloads  
+  
+arguments 에 다음을 추가하십시오
+"chromedriver":"path"
+
 2. Google Colaboratory 에서 수집한 이미지들을 각 model 별로 학습시키고 비교해본다.
   + python 3.6.8
     + torch 1.1.0
