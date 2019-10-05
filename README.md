@@ -19,7 +19,7 @@ pytorch를 이용해 이미지를 남자, 여자로 분류하며 image classific
       
       e.g.
       ```python  
-      arguments = {"keywords":keywords, "chromedriver":"c:/path/to/chromedriver.exe}  
+      arguments = {"keywords":keywords, "chromedriver":"c:/path/to/chromedriver.exe"}  
       ```  
 
 2. Google Colaboratory 에서 수집한 이미지들을 각 model 별로 학습시키고 비교해본다.
